@@ -23,11 +23,15 @@ class Client(object):
 		bs = BeautifulSoup(html, "lmxl")
 		title = bs.find("div", "dotd-title").text
 		return title
+	
+	def print_results(title):
+		print '\nFree eBook Title ----------> %s\n' % title
 
 	def main(self):
 		web = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
 		results = self.search_title(web)
-
-if __name__ = __main__:
+		print_results(results)
+		
+if __name__ == "__main__":
 	c = Client()
 	c.main()
