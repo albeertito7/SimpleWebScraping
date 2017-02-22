@@ -19,11 +19,14 @@ class Client(object):
 		f.close()
 		return html
 
-	def search(self, html):
-		pass
+	def search_title(self, html):
+		bs = BeautifulSoup(html, "lmxl")
+		title = bs.find("div", "dotd-title").text
+		return title
 
 	def main(self):
 		web = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
+		results = self.search_title(web)
 
 if __name__ = __main__:
 	c = Client()
