@@ -13,14 +13,17 @@ import urllib2
 
 class Client(object):
 
-	def webpage(self, page):
-		pass
+	def get_webpage(self, page):
+		f = urllib2.urlopen(page)
+		html = f.read()
+		f.close()
+		return html
 
 	def search(self, html):
 		pass
 
 	def main(self):
-		pass
+		web = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
 
 if __name__ = __main__:
 	c = Client()
