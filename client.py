@@ -9,7 +9,7 @@ Simple client web per saber el Free eBook actual de packtpub.com
 """
 
 import urllib2
-
+import bs4
 
 class Client(object):
 
@@ -31,7 +31,8 @@ class Client(object):
 		web = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
 		results = self.search_title(web)
 		print_results(results)
-		
+	
+	
 if __name__ == "__main__":
 	c = Client()
 	c.main()
