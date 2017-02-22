@@ -12,10 +12,16 @@ import urllib2
 
 
 class Client(object):
-	pass
 
+	def webpage(self, page):
+		pass
 
+	def search(self, html):
+		pass
 
+	def main(self):
+		pass
 
 if __name__ = __main__:
-	pass
+	c = Client()
+	c.main()
