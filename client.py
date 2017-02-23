@@ -15,9 +15,9 @@ class Client(object):
 
 	def get_webpage(self, page):
 		f = urllib2.urlopen(page)
-		html = f.read()
+		htmlpage = f.read()
 		f.close()
-		return html
+		return htmlpage
 
 	def search_title(self, html):
 		bs = BeautifulSoup(html, "lmxl")
@@ -25,12 +25,12 @@ class Client(object):
 		return title
 	
 	def print_results(title):
-		print '\nFree eBook Title ----------> %s\n' % title
+		pass
 
 	def main(self):
-		web = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
-		results = self.search_title(web)
-		print_results(results)
+		webpag = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
+		results = self.search_title(webpag)
+		print '\nFree eBook Title ----------> %s\n' % title
 	
 	
 if __name__ == "__main__":
