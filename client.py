@@ -20,17 +20,17 @@ class Client(object):
 		return htmlpage
 
 	def search_title(self, html):
-		bs = BeautifulSoup(html, "lmxl")
+		bs = BeautifulSoup(html, "lxml")
 		title = bs.find("div", "dotd-title").text
 		return title
 	
-	def print_results(title):
-		pass
+	def print_results(self, title):
+		print '\nFree eBook Title ----------> %s\n' % title
 
 	def main(self):
 		webpag = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
-		results = self.search_title(webpag)
-		print '\nFree eBook Title ----------> %s\n' % title
+		title = self.search_title(webpag)
+		self.print_results(title)
 	
 	
 if __name__ == "__main__":
