@@ -29,7 +29,7 @@ class Client(object):
 
 	def main(self):
 		webpag = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
-		title = self.search_title(webpag)
+		title = self.search_title(webpag).strip()
 		self.print_results(title)
 	
 	
