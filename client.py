@@ -1,4 +1,4 @@
-#!/usr/bin/env-python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim: set fileencoding=utf8 :
 
@@ -9,7 +9,7 @@ Simple client web per saber el Free eBook actual de packtpub.com
 """
 
 import urllib2
-import bs4
+from bs4 import BeautifulSoup
 
 class Client(object):
 
