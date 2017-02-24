@@ -25,11 +25,11 @@ class Client(object):
 		return title
 	
 	def print_results(self, title):
-		print '\nFree eBook Title ----------> %s\n' % title
+		print '\nFree eBook Title ----------> %s\n' % title.strip()
 
 	def main(self):
 		webpag = self.get_webpage('http://www.packtpub.com/packt/offers/free-learning/')
-		title = self.search_title(webpag).strip()
+		title = self.search_title(webpag)
 		self.print_results(title)
 	
 	
