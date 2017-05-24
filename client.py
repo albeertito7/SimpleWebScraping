@@ -5,7 +5,7 @@
 """
 Simple client web per saber el Free eBook actual de packtpub.com
 
-@author: albeertito7
+@author: albeertito7 ajkghfksdah
 """
 
 import urllib2
