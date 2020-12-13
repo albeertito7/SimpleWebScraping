@@ -3,9 +3,9 @@
 # vim: set fileencoding=utf8 :
 
 """
-Simple client web per saber el Free eBook actual de packtpub.com
+Simple web client to know the currently Free eBook of packtpub.com
 
-@author: albeertito7 ajkghfksdah
+@author: albeertito7
 """
 
 import urllib2
