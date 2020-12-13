@@ -1,2 +1,2 @@
 # SimpleWebScraping
-Optional Homework 1
+Simple web client to know the currently Free eBook of packtpub.com
